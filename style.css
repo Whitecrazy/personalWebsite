@@ -1,0 +1,102 @@
+body {
+    background-repeat: no-repeat;
+    
+}
+
+
+/*nav*/
+.modal-header, h4, .close {
+    background-color: #222222;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
+}
+.modal-footer {
+    background-color: #222222;
+}
+
+/*header*/
+.header {
+	text-align: center;
+    color: #fff;
+    background-image: url(../img/home_pic.jpg);
+    background-size: 1300px 50px;
+    background-position: center center;
+    /*background-repeat: repeat-x;*/
+}
+.intro-text {
+    padding-top: 180px;
+    padding-bottom: 300px;
+  }
+
+.intro-lead-in {
+    margin-bottom: 25px;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 22px;
+    color:#E0D100;
+ }
+
+.intro-heading {
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 75px;
+}
+
+#myModal-register button, #myModal-login button {
+    background-color: #222222;
+}
+
+/*content*/
+.box1 {
+    margin-top: 50px;
+}
+
+.content{
+    margin-top: 100px;
+}
+.mystyle {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+/*footer*/
+.footer{
+	background-color: #222222;
+	margin-top: 50px;
+    color: white;
+
+}
+
+.footer ul {
+	margin-top: 50px;
+	margin-bottom: 50px;
+    color: white;
+
+}
+.footer ul >li> a {
+    color: white;
+}
+.footer li {
+	list-style-type: none;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"> 
+	
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	
+
+	<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+	<script src="index.js"></script>
+</head>
+<body background="images/bg.jpg" height="42">
+
+<!-- head -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">.Code</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Blog</a></li>
+
+<!-- reginster -->
+          <li><a href="#" id="myBtn-register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+
+          <!-- Modal -->
+            <div class="modal fade" id="myModal-register" role="dialog">
+              <div class="modal-dialog">
+              
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header" style="padding:35px 50px;">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4><span class="glyphicon glyphicon-lock"></span> Sign Up</h4>
+                  </div>
+                  <div class="modal-body" style="padding:40px 50px;">
+                    <form role="form">
+                      <div class="form-group">
+                        <label for="email"><span class="glyphicon glyphicon-user"></span> Username</label>
+                        <input type="email" class="form-control" id="register-email" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                        <input type="password" class="form-control" id="register-password" placeholder="Enter password">
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="" checked>Remember me</label>
+                      </div>
+                        <button type="submit" class="btn btn-success btn-block" id="opener-register"><span class="glyphicon glyphicon-off"></span>          Sign Up</button>
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+<!-- login          -->
+          <li id="myBtn-login"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal-login" role="dialog">
+              <div class="modal-dialog">
+              
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header" style="padding:35px 50px;">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+                  </div>
+                  <div class="modal-body" style="padding:40px 50px;">
+                    <form role="form">
+                      <div class="form-group">
+                        <label for="email"><span class="glyphicon glyphicon-user"></span> Username</label>
+                        <input type="email" class="form-control" id="login-email" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                        <input type="password" class="form-control" id="login-password" placeholder="Enter password">
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="" checked>Remember me</label>
+                      </div>
+                        <button type="submit" class="btn btn-success btn-block" id="opener-login"><span class="glyphicon glyphicon-off"></span>          Login</button>
+                    </form>
+                  </div>
+                </div>
+
+              </div> 
+            </div>
+
+<!-- logout -->
+          <li><a id="opener-logout" href="#">Logout</a></li>
+
+          
+
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- Header -->
+<div class="container">
+  <div class="header">
+    <div class="intro-text">
+      <div class="intro-lead-in">Code. Build. Share</div>
+      <div class="intro-heading">LEARN ANDROID, IOS AND C</div>
+      <a href="#" class="btn btn-warning btn-lg">Explore Our Courses</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Content -->
+<div class="container">
+
+
+
+  <div class="row box1" style="">
+  <!-- <div class="col-sm-6">
+    <img class="img-rounded why"  src="images/learningstyles.jpg" alt="" width="300" height="300">
+  </div> -->
+  <div class=" text-center">
+    <h2>What are you signing up for</h2>
+    <p>You will get one email from us on Thursdays!</p>
+    <p>We will never sell or share your email address</p>
+    <p>Get free lessons & learning tips on email</p>
+    <p>Learn about common programming mistakes</p>
+    <p>Learn how to deal with interview questions</p>
+    <p>Break bad programming habits</p>
+
+  </div>
+</div>
+</div>
+
+
+  <div class="container content">
+
+    <div class="ui-widget" style="color:black;">
+        <label for="autocomplete-1">Type to Search:</label>
+        <input id="autocomplete-1" style="color:black">
+    </div>
+
+
+
+    <div class="row mystyle mybutton">
+
+            <div class="col-sm-4">
+              <a href="#" class="thumbnail mythumbnail">
+                <img src="images/about.jpg" alt="">
+              </a>
+                <p>About Us</p>
+             
+            </div>
+
+            <div class="col-sm-4">
+              <a href="#" class="thumbnail mythumbnail">
+                <img src="images/bloge.jpg" alt="" >
+              </a>
+                <p>Bloge</p>
+                
+            </div>
+
+            <div class="col-sm-4">
+              <a href="#" class="thumbnail mythumbnail">
+                <img src="images/job.jpg" alt="" >
+              </a>
+                <p>Job</p>
+                
+            </div>
+          
+        </div>
+  </div>
+
+
+<!-- Footer -->
+<div class="footer">
+
+<div class="container">
+  <div class="row">
+  <div class="col-sm-4">
+    
+    <ul class="">
+      <h3>EXPLORE</h3>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Bits+</a></li>
+      <li><a href="#">Job</a></li>
+    </ul>
+  </div>
+
+  <div class="col-sm-4">
+    <ul class="">
+      <h3>DOWNLOAD</h3>
+      <li><a href="#">For iOS</a></li>
+      <li><a href="#">For Android</a></li>
+      <h3>CONTACT</h3>
+      <p>Email/Chat</p>
+    </ul>
+  </div>
+
+  <div class="col-sm-4">
+    <h1>.CODE</h1>
+  </div>
+
+  
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
