@@ -68,9 +68,9 @@ $(document).ready(function(){
 
     $("#autocomplete-1").autocomplete({
         source: [
-            { value: "Light", url:'http://www.google.com'},
-            { value: "sunshine", url:'#'},
-            { value: "b & W", url:'#'},
+            { value: "Blog", url:'http://www.google.com'},
+            { value: "About Us", url:'#'},
+            { value: "Job", url:'#'},
         ],
         select: function (event, ui) {
             window.location = ui.item.url;
@@ -78,15 +78,3 @@ $(document).ready(function(){
 
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
